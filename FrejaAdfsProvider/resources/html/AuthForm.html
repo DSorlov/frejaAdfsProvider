@@ -1,0 +1,29 @@
+﻿<div id="loginArea">
+	<form method="post" id="loginForm" name="loginForm">
+		<input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%" />
+		<input id="context" type="hidden" name="Context" value="%Context%" />
+		<input id="status" type="hidden" name="Context" value="$STATUS$" />
+		<input id="code" type="hidden" name="Context" value="$CODE$" />
+
+		<img src="https://resources.test.frejaeid.com/qrcode/generate?qrcodedata=$QRDATA$" />
+
+	</form>
+
+	<div id="errorArea" class="error">
+		<p id="error">$ERROR$</p>
+	</div>
+
+	<div id="intro" class="groupMargin">
+		<p id="supportEmail">$SUPPORT$</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+	
+    window.onload = function () {
+        window.setTimeout(function () { document.loginForm.submit(); }, 2000);
+    };
+
+	//]]>
+</script>
